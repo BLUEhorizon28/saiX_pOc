@@ -16,13 +16,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Setup each test card
+        // Setup each test card with updated subtitles
         setupTestCard(
             findViewById(R.id.cardHeightWeight),
             R.drawable.ic_height,
             R.drawable.icon_background_red,
             "Height & Weight",
-            "Capture anthropometrics"
+            "Capture \nanthropometrics" // Using \n for line break
         )
 
         setupTestCard(
@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             R.drawable.ic_arrow_upward,
             R.drawable.icon_background_green,
             "Vertical Jump",
-            "Estimate jump height"
+            "Estimate jump height \n  and accuracy"
         )
 
         setupTestCard(
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             R.drawable.ic_transfer_within_a_station,
             R.drawable.icon_background_blue,
             "Shuttle Run",
-            "Measure agility & time"
+            "Measure agility & time \n to finish"
         )
 
         val sitUpsCard = findViewById<View>(R.id.cardSitUps)
@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
             R.drawable.ic_fitness_center,
             R.drawable.icon_background_yellow,
             "Sit-ups",
-            "Automatic repetition counting"
+            "Automatic repetition   \ncounter"
         )
 
         setupTestCard(
@@ -55,15 +55,15 @@ class MainActivity : AppCompatActivity() {
             R.drawable.ic_directions_run,
             R.drawable.icon_background_orange,
             "Endurance Runs",
-            "Track distance/time with GPS"
+            "Track distance/time " // This can stay as one line
         )
-        
+
         setupTestCard(
             findViewById(R.id.cardMoreTests),
             R.drawable.ic_more_horiz,
             R.drawable.icon_background_purple,
             "More Tests",
-            "Push-ups, plank, etc."
+            "  Push-ups, plank, etc. "
         )
 
         // Set click listener for the Sit-ups card
@@ -93,10 +93,10 @@ class MainActivity : AppCompatActivity() {
         cardIcon.background = ContextCompat.getDrawable(this, iconBgRes)
         cardTitle.text = title
         cardSubtitle.text = subtitle
-        
+
         // Set a generic click listener for other cards
         if (cardView.id != R.id.cardSitUps) {
-             cardView.setOnClickListener { showToast("$title clicked") }
+            cardView.setOnClickListener { showToast("$title clicked") }
         }
     }
 

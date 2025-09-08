@@ -41,7 +41,9 @@
             android:layout_height="wrap_content"
             android:text="Capture anthropometrics"
             android:textColor="@color/text_secondary"
-            android:textSize="12sp"/>
+            android:textSize="12sp"
+            android:gravity="center_horizontal"
+            android:minLines="2"/>
     </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>
