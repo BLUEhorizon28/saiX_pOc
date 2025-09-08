@@ -15,18 +15,15 @@
         android:paddingBottom="48dp">
 
         <ImageView
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:src="@drawable/ic_runner"
-            android:background="@drawable/white_circle_background"
-            android:padding="12dp"
-            app:tint="@color/header_start_color" />
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/app_logo" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="SAI TalentX"
+            android:text="SAI Prerak"
             android:textColor="@color/white"
             android:textSize="22sp"
             android:textStyle="bold" />
@@ -75,23 +72,17 @@
 
                     <include layout="@layout/test_card"
                         android:id="@+id/cardHeightWeight" />
-
                     <include layout="@layout/test_card"
                         android:id="@+id/cardVerticalJump" />
-
                     <include layout="@layout/test_card"
                         android:id="@+id/cardShuttleRun" />
-
                     <include layout="@layout/test_card"
                         android:id="@+id/cardSitUps" />
-
                     <include layout="@layout/test_card"
                         android:id="@+id/cardEndurance" />
-
                     <include layout="@layout/test_card"
                         android:id="@+id/cardMoreTests" />
                 </GridLayout>
-
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
